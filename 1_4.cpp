@@ -7,11 +7,8 @@ struct DATE
 
 int ktraNN(int year)
 {
-    if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
-    {
-        
-    }
-    return 0;
+   return  year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
+ 
 }
 
 void nhap(DATE &day)
