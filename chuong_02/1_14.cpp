@@ -166,9 +166,9 @@ int main()
     Xhander(arr, x2, y2, 0,-n, n, count);
     arr[n][n] = temp;
 
-    for (int i = 1; i <= 21; i++)
+    for (int i = 1; i <= 2*n-1; i++)
     {
-        for (int j = 1; j <= 25; j++)
+        for (int j = 1; j <=2*n-1; j++)
         {
             cout << arr[i][j]<<" ";
         }
