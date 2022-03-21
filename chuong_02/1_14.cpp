@@ -170,7 +170,7 @@ int main()
     {
         for (int j = 1; j <=2*n-1; j++)
         {
-            cout << arr[i][j]<<" ";
+            cout << arr[i][j]<<"  ";
         }
         cout << endl;
     }
