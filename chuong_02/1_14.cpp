@@ -67,7 +67,6 @@ int main()
     int YcurLocal = 0;
     while (temp <= n * n)
     {
-
         for (int i = 1; i <= n; i++)
         {
             arr[XcurLocal + x0[i]][YcurLocal + y0[i]] = temp;
