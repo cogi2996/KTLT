@@ -15,10 +15,6 @@ void nhap(int &n, int k, vector<int> &v)
         cin >> x;
         v.push_back(x);
     }
-    // for(int i =0 ;i<v.size();i++)
-    // {
-    //     cout<<v[i] << " ";
-    // }
 }
 
 void aranger(int n, int k, vector<int> &v)
@@ -32,20 +28,12 @@ void aranger(int n, int k, vector<int> &v)
     sort(arr, arr + v.size());
     for (int i = 0; i < v.size(); i++)
     {
-        // cout << v[i] << " ";
         v[i] = arr[i];
     }
 }
 
 void solve(int n, int k, vector<int> &v)
 {
-    // cout<<"here";
-    // cout<<v.size();
-    // aranger(n, k, v);
-    // for (int i = 0; i < v.size(); i++)
-    // {
-    //     cout << v[i] << " ";
-    // }
     int i = 0;
     while (v.size() > 1)
     {
@@ -77,6 +65,5 @@ int main()
     int k;
     vector<int> v;
     nhap(n, k, v);
-    // cout<<"("<<v.size()<<")";
     solve(n, k, v);
 }
