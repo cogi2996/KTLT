@@ -109,8 +109,6 @@ void taoBang(int a[][100], int n1, int n2)
     int length = 0;
     while (temp <= n1)
     {
-        // tu di truoc
-        // locate[temp]
         start = length;
         longMax = 0;
         for (int i = 0; i < n2; i++)
@@ -118,35 +116,8 @@ void taoBang(int a[][100], int n1, int n2)
             int Long = 0;
 
             int x = truTu(i, temp, start, TuAns, MauAns, sizeNo, a, Long, locate, valc);
-            // if (x == 0)
-            // {
-            //     check1[count] = 0;
-            // }
-            // else
-            // {
-            //     check1[count] = 1;
-            // }
-            // tru mau
             int y = truMau(i, temp, start, TuAns, MauAns, sizeNo, a, Long, locate, valc);
-            // if (x == 0)
-            // {
-            //     check2[count] = 0;
-            // }
-            // else
-            // {
-            //     check2[count] = 1;
-            // }
-
-            // di dong deu
             int z = truTuvaMau(i, temp, start, TuAns, MauAns, sizeNo, a, Long, locate, valc);
-            // if (x == 0)
-            // {
-            //     check3[count] = 0;
-            // }
-            // else
-            // {
-            //     check3[count] = 1;
-            // }
             // kiem tra xem co anh nao dong deu bang 0
             if (x == 0 && y == 0 && z == 0)
             {
@@ -172,7 +143,6 @@ void taoBang(int a[][100], int n1, int n2)
         length++;
 
         fill(locate, locate + n2, 0);
-        // count = 0;
         temp++;
     }
 }
