@@ -34,7 +34,7 @@ int truTu(int i, int temp, int start, int *Tu, int *Mau, int sizeNo, int a[][100
 int truMau(int i, int temp, int start, int *Tu, int *Mau, int sizeNo, int a[][100], int &Long, int *locate, int &valc)
 {
     int tempCP = temp;
-    temp = temp - 1; // da tru cho 1
+    temp = temp - 1; 
     int check = 0;
     while (temp > -1)
     {
@@ -102,7 +102,6 @@ void taoBang(int a[][100], int n1, int n2)
     int longMax = 0;
     int locate[100] = {0};
     int valc = 0;
-    // int check1[100] = {0}, check2[100] = {0}, check3[100] = {0};
     int count = 0;
     int sumLong = 0;
     int start = 0;
@@ -127,7 +126,6 @@ void taoBang(int a[][100], int n1, int n2)
                 locate[valc]++;
                 a[start + locate[valc]][i] = 0;
             }
-            // count++;
             valc++;
             if (Long > longMax)
             {
