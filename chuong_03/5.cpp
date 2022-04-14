@@ -9,6 +9,7 @@ int main()
     for(int i = 1;i<=n;i++)
     {   
         s = s + 1/(double)(temp = temp * i);
+        
     cout<<"("<< 1/(double)(temp = temp * i)<<")";
     }
     cout<<s;
