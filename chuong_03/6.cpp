@@ -8,7 +8,6 @@ int main()
  double sx = 1,temp = 1;
  double x ;
  cin>>x;
- // do phuc tap n
 for(int i = 0; i<= n;i++)
 {
     s =  s + sx/temp;
