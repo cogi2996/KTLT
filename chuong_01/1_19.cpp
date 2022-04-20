@@ -1,56 +1,44 @@
-#include <iostream>
-#include <fstream>
-#include <cstdlib>
-#include <time.h>
-#include <set>
-#include <vector>
+#include<iostream>
+#include<set>
+#include<fstream>
+#include<stdlib.h>
+
 using namespace std;
 
 int main()
 {
-    srand(time(0));
-    ofstream fileOut1;
-    fileOut1.open("SONGUYEN.INP", ios::out);
-    long dem = 0;
-    for (long i = 0; i < 1000; i++)
+    fstream file1,file2;
+    file1.open("SONGUYEN.INP",ios::out);
+    for(int i =1 ;i<=10000;i++)
     {
-        if (dem == 10)
-        {
-            fileOut1 << endl;
-            dem = 0;
-        }
-        fileOut1 << rand() % 10 << " ";
-        dem++;
+        file1<< rand()%10<<" ";
+        if(i%10==0)
+            file1<<endl;
     }
-    // sap xep  theo thu tu tang dan
-    ifstream fileIn;
-    fileIn.open("SONGUYEN.INP", ios::in);
-    multiset<long> s;
-    long arr[2000];
-    long i = 0;
-    while (!fileIn.eof())
+    file1.close();
+    file1.open("SONGUYEN.INP",ios::in);
+    multiset<int>s;
+    int i  =0;
+    while(i<10000)
     {
-        fileIn >> arr[i];
-        s.insert(arr[i]);
+        int x;
+        file1>>x;
+        s.insert(x);
         i++;
     }
-    ofstream fileOut2;
-    fileOut2.open("SONGUYEN.OUT", ios::out);
-    long dem1 = 0;
-    for (long v : s)
+    i = 0;
+    file1.close();
+    file2.open("SONGUYEN.OUT",ios::out);
+    int temp = 0;
+    for(auto v:s)
     {
-        // if(v==1000)break;
-        if (dem1 == 10)
+        file2<<v<<" ";
+        temp++;
+        if(temp == 10)
         {
-            fileOut2 << endl;
-            dem1 = 0;
+            file2<<endl;
+            temp = 0; 
         }
-        fileOut2 << v << " ";
-        dem1++;
     }
-    // fileOut2<<s.size();
-    fileOut1.close();
-    fileIn.close();
-    fileOut2.close();
+    file2.close();
 }
-// fix loi thieu mat dong 100   
