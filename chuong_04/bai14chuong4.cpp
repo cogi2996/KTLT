@@ -3,9 +3,8 @@
 using namespace std;
 // 1234
 string s;
-int n,a[100];
+int n,a[100],b[100]  ={0};
 void HoanVi(int k);
-int ktraTrung(int x,int k);
 void xuat();
 int main()
 {
@@ -14,30 +13,22 @@ int main()
 	HoanVi(0);
 }
 
-int ktraTrung(int x,int k)
-{
-	for(int j =0;j<k;j++)
-	{
-		if(x==a[j])
-			return 1;
-	}
-	return 0;
-}
 void HoanVi(int k)
 {
 	if(k == n)
 	{
 		xuat();
-		a[100] ={-1};
 	}
 	else
 	{
 		for(int i =0 ;i<n;i++)
 		{
-			if(!ktraTrung(i,k))
+			if(b[i]==0)
 			{
 				a[k] = i;
+				b[i] = 1;
 				HoanVi(k+1);
+				b[i] = 0;
 			}
 		}
 	}
