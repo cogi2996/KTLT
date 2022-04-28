@@ -75,16 +75,7 @@ int main()
         XcurLocal++;
         YcurLocal++;
     }
-
-    // for (int i = 1; i <= 21; i++)
-    // {
-    //     for (int j = 1; j <= 25; j++)
-    //     {
-    //         cout << arr[i][j];
-    //     }
-    //     cout << endl;
-    // }
-
+    
     // BEN TRAI
     i = 1;
     int x1[100], y1[100], x2[100], y2[100], x3[100], y3[100], x4[100], y4[100];
@@ -117,11 +108,6 @@ int main()
 
     LoangDoiXungY(x1, y1, x2, y2, xPause * 2 + 1);
 
-    // cout << endl;
-    // for (int k = 1; k <= xPause * 2 + 1; k++)
-    // {
-    //     cout << y1[k] << " ";
-    // }
     /////////////
     // for(int k = 0;k<=)
     int tempX = -(n - 1) / 2;
@@ -150,14 +136,6 @@ int main()
     }
 
     LoangDoiXungX(x3, y3, x4, y4, count + 1);
-    // 	for(int j = 1;j<=count+1;j++)
-    // {
-    // 	cout<<x4[j]<<" ";
-    // }
-    // lam mat tren
-
-    // lam mat tren
-    // int arr[][300],int *x3,int y3,int step,int n,int count
     temp = arr[n][n];
     Xhander(arr, x3, y3, n,0, n, count);
     Xhander(arr, x4, y4, -n,0, n, count);
