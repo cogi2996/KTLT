@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include<bits/stđc++.h>
 using namespace std;
 
 int main()
@@ -15,8 +15,10 @@ int main()
 		}
 		else if(s[i-1] !=' '&&i-1>=0){
 			reverse(x[sizeX].begin(),x[sizeX].end());
-			cout<<x[sizeX]<< " " ;
 			sizeX++;
 		}
 	}
+	for(int i= 0;i<sizeX-1;i++)
+		cout<<x[i]<<" ";
+	cout<<x[sizeX-1];
 }
