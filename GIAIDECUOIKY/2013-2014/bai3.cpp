@@ -1,72 +1,23 @@
-#include<iostream>
-#include<string>
+#include<bits/stdc++.h>
 using namespace std;
-int  minA = 0,minCur = 0;
-string x,y;
-int a[500];
-void lietke(int k);
 
-
-int main()
-{
-	/*
-	0123456
-	CEACEEC
-	AECECA
-	*/
-	getline(cin,x);
-	getline(cin,y);	
-	lietke(0);
-	cout<<minA;
-}
-
-int checkXinY()
-{
-	int j = 0;
-	for(int i = 0;i<x.length();i++)
+int main(){
+	string a,b;
+	getline(cin,a);
+	getline(cin,b);
+	int lna = a.size(),lnb = b.size();
+	int c[100][100] ={0};
+	for(int i = 0;i<lna;i++)
+		c[0][i] = 0;
+	for(int i =0;i<lnb;i++)
+		c[i][0] =0;
+	for(int i = 1;i<=lnb;i++)
 	{
-		if(a[i] == 1)
-		{
-			if(j==y.length())
-				return 0;
-			for(j;j<y.length();j++)
-			{
-				if(j == y.length() - 1&&x[i]!=y[j])
-				{
-					return 0;
-				}
-				if(x[i] == y[j])
-				{
-					j++;
-					break;
-				}
-				
-			}
-		}
+		for(int j =1;j<=lna;j++)
+			if(b[i-1]==a[j-1])
+				c[i][j] = c[i-1][j-1]+1;
+			else 
+				c[i][j] = max(c[i-1][j],c[i][j-1]);
 	}
-	return 1;
-}
-
-void lietke(int k)
-{
-	if(k == x.length())
-	{
-		minCur = 0;
-	if(checkXinY()==1)
-		for(int i = 0 ;i<x.length();i++)
-		{
-			if(a[i]==1)
-				minCur++;
-		}
-		if(minA<minCur)
-			minA = minCur;
-	}
-	else
-	{
-		for(int i = 0;i<=1;i++)
-		{
-			a[k] = i ;
-			lietke(k+1); 
-		}
-	}
+	cout<<c[lnb][lna];
 }
