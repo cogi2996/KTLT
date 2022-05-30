@@ -1,34 +1,18 @@
-
-#include<bits/stdc++.h> 
+#include<bits/stdc++.h>
 using namespace std;
 
 int main()
 {
-string x;
-getline(cin,x);	
-string a[100];
-int temp = 0,key  = 0;
-for(int i  =0 ;i <= x.length();i++)
-{
-	
-	if(x[i]!=' '&&x[i]!='\0')
+	string s,token;
+	getline(cin,s);
+	int keyfirst = 0;
+	stringstream ss(s);
+	while(ss>>token)
 	{
-		a[temp]+=x[i];
-		key = 1;
+		reverse(token.begin(),token.end());
+		if(keyfirst++!=0)
+			token = " " +token ;
+		cout<<token;
+		token = "";
 	}
-	else if(key ==1 )
-	{
-		temp++;
-		key = 0;
-	}
-}
-
-for(int i = 0;i<temp -1;i++)
-{
-	reverse(a[i].begin(),a[i].end());
-	cout<<a[i]<<" "; 
-}
-
-reverse(a[temp-1].begin(),a[temp - 1].end());
-cout<<a[temp-1];
 }
