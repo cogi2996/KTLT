@@ -1,17 +1,20 @@
-#include<iostream>
-#include<string>
+#include<bits/stdc++.h>
 using namespace std;
-
-int main()
-{
-	string a;
-	getline(cin,a);
-	int diem  =0;
-	for(int i =0;i<a.length();i++)
-	{
-		if(a[i] == 'V')
-			diem++;
-	}
-	cout<<diem;
+int main(){
+	int n;
+	string s;
+	getline(cin,s);
+	n = s.size();
+	int left = 1;
+	int score = 0;
+	for(int i =0;i<n;i++)
+	{	
 	
+		if(s[i]=='V')
+			score+=left++;
+		else{
+			left = 1;
+		} 
+	}
+	cout<<score;
 }
