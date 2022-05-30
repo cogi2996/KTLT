@@ -17,20 +17,19 @@ int main(){
 	int a[1000],size = 0;
 	for(int i =31;i>=31-k+1;i--)
 	{
-		a[size] = layBit(n,i);
-		size++;
+		a[size++] = layBit(n,i);
+		
 	}
 	n = n <<k;
 	size = 0;
 	for(int i = k-1;i>=0;i--)
 	{
-		int bit = a[size];
+		int bit = a[size++];
 			if(bit == 1){
 				batBit(n,i); 
 			}
 			else
 				tatBit(n,i);
-		size++;
 	}
 	cout<<n;
 
