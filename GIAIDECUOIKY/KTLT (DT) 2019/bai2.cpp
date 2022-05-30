@@ -17,7 +17,7 @@ void duyetCH()
 	}
 }
 
-void hoanvi(int size)
+void toHop(int size)
 {
 	if(size==n)
 		duyetCH();
@@ -26,7 +26,7 @@ void hoanvi(int size)
 		for(int i =0;i<=1;i++)
 		{
 			a[size] = i;
-			hoanvi(size+1);
+			toHop(size+1);
 		}
 	}
 }	
@@ -35,7 +35,7 @@ int main() {
 	cin>>n>>k;
 	for(int  i =0;i<n;i++)
 		cin>>arr[i];
-	hoanvi(0);
+	toHop(0);
 	cout<<Max;
 	return 0;
 }
