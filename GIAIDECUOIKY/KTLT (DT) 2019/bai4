@@ -28,7 +28,7 @@ int main(){
 			if(bit == 1){
 				batBit(n,i); 
 			}
-			else if(bit==0)
+			else
 				tatBit(n,i);
 		size++;
 	}
