@@ -13,6 +13,6 @@ int main()
 		if(keyfirst++!=0)
 			token = " " +token ;
 		cout<<token;
-		token = "";
-	}
 }
+}
+
